@@ -14,7 +14,7 @@ export default function page() {
   if (error) return <div>Failed to fetch characters.</div>;
   if (isLoading) return <h2>Loading...</h2>;
   //  looping data quotes
-  return data.quotes.map((item) => (
+  return data.quotes.map((item: any) => (
     <div key={item.id} className="p-4 my-2 rounded-lg bg-slate-400">
       <h3 className="text-2xl">{item.quote}</h3>
       <p className="italic text-mute">{item.author}</p>
